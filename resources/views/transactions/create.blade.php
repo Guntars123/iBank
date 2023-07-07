@@ -28,18 +28,19 @@
                                         value="{{ $account->id }}">{{ $account->account_number }} {{$account->currency}}
                                     </option>
                                 @endforeach
-                                    @foreach($investmentAccounts as $account)
-                                        <option
-                                            value="{{ $account->id }}">{{ $account->account_number }} {{$account->currency}}
-                                        </option>
-                                    @endforeach
+                                @foreach($investmentAccounts as $account)
+                                    <option
+                                        value="{{ $account->id }}">{{ $account->account_number }} {{$account->currency}}
+                                    </option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="mb-4">
                             <x-label for="receiver_account_number" class="block text-gray-700 text-sm font-bold mb-2">
                                 Receiver Account Number:
                             </x-label>
-                            <x-input type="text" name="receiver_account_number" id="receiver_account_number" value="{{old('receiver_account_number')}}"
+                            <x-input type="text" name="receiver_account_number" id="receiver_account_number"
+                                     value="{{old('receiver_account_number')}}"
                                      class="form-input block w-full mt-1"/>
                         </div>
                         <div class="mb-4">

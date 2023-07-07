@@ -2,29 +2,31 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{$investmentAccount->account_number}}
-        </h2>
-        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex text-xl text-gray-800 leading-tight">
-            <x-nav-link :href="route('showTransactionForm')" :active="request()->routeIs('showTransactionForm')">
-                {{ __('Add funds') }}
-            </x-nav-link>
-        </div>
-        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex text-xl text-gray-800 leading-tight">
-            <x-nav-link :href="route('showTransactionForm')" :active="request()->routeIs('showTransactionForm')">
-                {{ __('Transfer funds') }}
-            </x-nav-link>
-        </div>
-        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex text-xl text-gray-800 leading-tight">
-            <x-nav-link :href="route('investment-account.buy-crypto-form',$investmentAccount->id )" :active="request()->routeIs('investment-account.buy-crypto-form')">
-                {{ __('Buy crypto') }}
-            </x-nav-link>
-        </div>
-        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex text-xl text-gray-800 leading-tight">
-            <x-nav-link :href="route('investment-account.sell-crypto-form', $investmentAccount->id)" :active="request()->routeIs('investment-account.sell-crypto-form')">
-                {{ __('Crypto assets') }}
-            </x-nav-link>
-        </div>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{$investmentAccount->account_number}}
+            </h2>
+            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex text-xl text-gray-800 leading-tight">
+                <x-nav-link :href="route('showTransactionForm')" :active="request()->routeIs('showTransactionForm')">
+                    {{ __('Add funds') }}
+                </x-nav-link>
+            </div>
+            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex text-xl text-gray-800 leading-tight">
+                <x-nav-link :href="route('showTransactionForm')" :active="request()->routeIs('showTransactionForm')">
+                    {{ __('Transfer funds') }}
+                </x-nav-link>
+            </div>
+            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex text-xl text-gray-800 leading-tight">
+                <x-nav-link :href="route('investment-account.buy-crypto-form',$investmentAccount->id )"
+                            :active="request()->routeIs('investment-account.buy-crypto-form')">
+                    {{ __('Buy crypto') }}
+                </x-nav-link>
+            </div>
+            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex text-xl text-gray-800 leading-tight">
+                <x-nav-link :href="route('investment-account.sell-crypto-form', $investmentAccount->id)"
+                            :active="request()->routeIs('investment-account.sell-crypto-form')">
+                    {{ __('Crypto assets') }}
+                </x-nav-link>
+            </div>
         </div>
     </x-slot>
 
@@ -40,14 +42,16 @@
                             <p>Balance: {{$investmentAccount->balance}} {{$investmentAccount->currency}}</p>
                             <p>Created
                                 at: {{ $investmentAccount->created_at->setTimezone(auth()->user()->timezone)->format('Y-m-d H:i:s') }}</p>
-                            <form method="post" name="delete" action="{{route('deleteInvestmentAccount', $investmentAccount->id)}}"
+                            <form method="post" name="delete"
+                                  action="{{route('deleteInvestmentAccount', $investmentAccount->id)}}"
                                   novalidate>
                                 @csrf
                                 <x-button class="mt-4 mb-4">{{ __('Delete account') }}</x-button>
                             </form>
                         </div>
                         <div class="custom-div">
-                            <a href="{{route('investmentAccounts')}}" class="flex p-2 bg-gray-800 rounded-e-2xl">Back</a>
+                            <a href="{{route('investmentAccounts')}}"
+                               class="flex p-2 bg-gray-800 rounded-e-2xl">Back</a>
                         </div>
                     </div>
                     <br>
@@ -55,9 +59,13 @@
                         <div class="custom-div flex justify-between">
                             <h2 class="mt-2">Current crypto assets</h2>
                             <div class="flex justify-between">
-                            <a class="flex p-2 mt-2 mr-2 bg-gray-800 rounded-e-2xl" href="{{ route('investment-account.buy-crypto', $investmentAccount) }}">Buy Crypto</a>
-                            <a class="flex p-2 mt-2 bg-gray-800 rounded-e-2xl" href="{{ route('investment-account.sell-crypto', $investmentAccount) }}">Sell Crypto</a>
-                        </div>
+                                <a class="flex p-2 mt-2 mr-2 bg-gray-800 rounded-e-2xl"
+                                   href="{{ route('investment-account.buy-crypto', $investmentAccount) }}">Buy
+                                    Crypto</a>
+                                <a class="flex p-2 mt-2 bg-gray-800 rounded-e-2xl"
+                                   href="{{ route('investment-account.sell-crypto', $investmentAccount) }}">Sell
+                                    Crypto</a>
+                            </div>
                         </div>
                         @if(count($currentAssets))
                             <table class="table mt-2">
@@ -81,7 +89,9 @@
                         @else
                             <div class="custom-div">
                                 <p>No assets found. Buy them here:</p>
-                                <a class="flex ml-2 p-2 bg-gray-800 rounded-e-2xl" href="{{ route('investment-account.buy-crypto', $investmentAccount) }}">Buy Crypto</a>
+                                <a class="flex ml-2 p-2 bg-gray-800 rounded-e-2xl"
+                                   href="{{ route('investment-account.buy-crypto', $investmentAccount) }}">Buy
+                                    Crypto</a>
                             </div>
                         @endif
                     </div>
@@ -89,13 +99,4 @@
             </div>
         </div>
     </div>
-
-    <script>
-        function applyFilter() {
-            const type = document.getElementById('type').value;
-            const urlParams = new URLSearchParams(window.location.search);
-            urlParams.set('type', type);
-            window.location.href = window.location.pathname + '?' + urlParams.toString();
-        }
-    </script>
 </x-app-layout>

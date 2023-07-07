@@ -22,7 +22,6 @@ Before you begin, ensure that you have the following prerequisites installed on 
     ```bash
     composer install
 4. Create a copy of the `.env.example` file and rename it to `.env`:
-    ```bash
    
 5. Open the .env file and set the following variables:
 
@@ -43,7 +42,7 @@ Before you begin, ensure that you have the following prerequisites installed on 
 
 1. Start the local development server:
     ```bash
-    php artisan serve
+    php artisan serv
    
 2. Open the application in your browser!
 
@@ -53,4 +52,21 @@ The iBank project is built using Laravel, a powerful PHP framework. It leverages
 The project uses MySQL as the database to store user and financial data.
 To fetch cryptocurrency data, the project integrates with the CoinMarketCap API. Make sure to provide your valid CoinMarketCap API key in the .env file.
 Enjoy using the iBank project and managing your finances seamlessly!
+
+## Page screenshots
+
+![Homepage Preview](public/screenshots/welcome.png)
+![Homepage Preview](public/screenshots/login.png)
+![Homepage Preview](public/screenshots/home.png)
+![Homepage Preview](public/screenshots/bank_accounts.png)
+![Homepage Preview](public/screenshots/bankacc-show.png)
+![Homepage Preview](public/screenshots/transaction_form.png)
+![Homepage Preview](public/screenshots/invest-acc-show.png)
+![Homepage Preview](public/screenshots/buy-ctypto.png)
+![Homepage Preview](public/screenshots/sell-crypto.png)
+![Homepage Preview](public/screenshots/security.png)
+
+
+
+
 

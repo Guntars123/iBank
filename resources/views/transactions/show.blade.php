@@ -12,7 +12,8 @@
                 <div class="p-6 bg-white">
                     <div class="custom-div flex justify-between">
                         <h2 class="text-xl">Info about transaction: </h2>
-                        <a href="{{route('showAccounts')}}" class="flex p-2 bg-gray-800 rounded-e-2xl">Back to accounts</a>
+                        <a href="{{route('showAccounts')}}" class="flex p-2 bg-gray-800 rounded-e-2xl">Back to
+                            accounts</a>
                     </div>
                     <div class="flex justify-between gap-2 border border-gray-200 p-6 rounded-xl mt-2">
                         <table class="table">

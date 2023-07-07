@@ -41,7 +41,6 @@
                             <a href="{{route('showAccounts')}}" class="flex p-2 bg-gray-800 rounded-e-2xl">Back</a>
                         </div>
                     </div>
-
                     <div class="mt-4 flex-grow">
                         <div class="custom-div h-full">
                             <h2 class="font-bold text-xl mb-4">In total you have ({{ $transactions->total() }})

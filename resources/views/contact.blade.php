@@ -41,7 +41,8 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <h3 class="dashboard-heading">Contact Us</h3>
                     <p class="dashboard-text">
-                        If you have any questions or concerns, please feel free to reach out to us. Our dedicated support team is available to assist you.
+                        If you have any questions or concerns, please feel free to reach out to us. Our dedicated
+                        support team is available to assist you.
                     </p>
                     <div class="dashboard-contact">
                         <h4 class="dashboard-heading">Contact Information</h4>

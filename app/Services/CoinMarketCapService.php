@@ -13,10 +13,12 @@ class CoinMarketCapService
 
     public function __construct()
     {
+        $api_key = config('services.coinmarketcap.api_key');
+
         $this->client = new Client([
             'base_uri' => 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/',
             'headers' => [
-                'X-CMC_PRO_API_KEY' => env('COIN_MARKET_CAP_API_KEY'),
+                'X-CMC_PRO_API_KEY' => $api_key,
                 'Accept' => 'application/json'
             ]
         ]);

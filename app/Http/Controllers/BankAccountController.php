@@ -34,7 +34,6 @@ class BankAccountController extends Controller
 
     public function store(BankAccountRequest $request): RedirectResponse
     {
-
         BankAccount::create([
             'user_id' => auth()->id(),
             'account_number' => $this->generateBankAccountNumber(),
@@ -47,7 +46,6 @@ class BankAccountController extends Controller
 
     public function show(BankAccount $bankAccount)
     {
-
         if ($bankAccount->user_id != auth()->id()) {
             return redirect('/accounts')->withErrors('You are not authorized to view this account.');
         }
@@ -63,7 +61,6 @@ class BankAccountController extends Controller
 
     public function destroy(BankAccount $bankAccount): RedirectResponse
     {
-
         if ($bankAccount->balance != 0) {
             return redirect('/accounts')->withErrors('You cannot delete an account with a balance.');
         }

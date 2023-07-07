@@ -21,25 +21,27 @@
                         <div class="flex justify-between">
                             @if(count(auth()->user()->investmentAccounts)<1)
                                 <div class="custom-div">
-                                    <h2 class="font-bold text-xl mb-4">At the moment you dont have an investment account !</h2>
+                                    <h2 class="font-bold text-xl mb-4">At the moment you dont have an investment account
+                                        !</h2>
                                 </div>
-                            <div class="custom-div mb-4 ">
-                                <form method="POST">
-                                    @csrf
-                                    <x-button type="submit">Make new investment account</x-button>
-                                </form>
-                            </div>
+                                <div class="custom-div mb-4 ">
+                                    <form method="POST">
+                                        @csrf
+                                        <x-button type="submit">Make new investment account</x-button>
+                                    </form>
+                                </div>
                             @endif
                         </div>
                         @if(count(auth()->user()->investmentAccounts)>0)
                             <div class="custom-div">
                                 <p class="font-bold text-xl mb-4">Your accounts:</p>
                             </div>
-                            <a href="investment-account/{{$investmentAccount->id}}"><div class="flex justify-between gap-2 border border-gray-200 p-6 rounded-xl">
-                                <h2 class="font-bold text-xl m-4">{{$investmentAccount->currency}}</h2>
-                                <p class="text-lg m-4">{{$investmentAccount->account_number}}</p>
-                                <p class="text-lg m-4">{{$investmentAccount->balance}} {{$investmentAccount->currency}}</p>
-                                <p class="text-lg m-4">{{$investmentAccount->created_at}}</p>
+                            <a href="investment-account/{{$investmentAccount->id}}">
+                                <div class="flex justify-between gap-2 border border-gray-200 p-6 rounded-xl">
+                                    <h2 class="font-bold text-xl m-4">{{$investmentAccount->currency}}</h2>
+                                    <p class="text-lg m-4">{{$investmentAccount->account_number}}</p>
+                                    <p class="text-lg m-4">{{$investmentAccount->balance}} {{$investmentAccount->currency}}</p>
+                                    <p class="text-lg m-4">{{$investmentAccount->created_at}}</p>
                                     <x-button class="flex">Interact</x-button>
                                 </div>
                             </a>
@@ -48,15 +50,26 @@
                             <div class="custom-div border-b-2">
                             </div>
                             <div class="custom-div border-b-2">
-                                <p>We offer open one investment account in USD only, due to the stability and widespread acceptance of the United States Dollar in the global financial markets.</p>
+                                <p>We offer open one investment account in USD only, due to the stability and widespread
+                                    acceptance of the United States Dollar in the global financial markets.</p>
                                 <br>
                                 <p>Here are some of the benefits of opening an investment account with us:</p>
                                 <ul>
-                                    <li><span>Deposit Money</span>: Easily add funds to your investment account and start building your portfolio.</li>
-                                    <li><span>Buy Cryptocurrency</span>: Take advantage of the booming digital asset market by purchasing a wide range of cryptocurrencies.</li>
-                                    <li><span>Sell Cryptocurrency</span>: When the time is right, sell your cryptocurrencies to capitalize on market trends and secure potential profits.</li>
-                                    <li><span>Real-Time Market Data</span>: Stay informed with up-to-date market information, including price charts, trends, and performance indicators.</li>
-                                    <li><span>Portfolio Management</span>: Track the performance of your investments, view your asset allocation, and monitor your overall portfolio growth.</li>
+                                    <li><span>Deposit Money</span>: Easily add funds to your investment account and
+                                        start building your portfolio.
+                                    </li>
+                                    <li><span>Buy Cryptocurrency</span>: Take advantage of the booming digital asset
+                                        market by purchasing a wide range of cryptocurrencies.
+                                    </li>
+                                    <li><span>Sell Cryptocurrency</span>: When the time is right, sell your
+                                        cryptocurrencies to capitalize on market trends and secure potential profits.
+                                    </li>
+                                    <li><span>Real-Time Market Data</span>: Stay informed with up-to-date market
+                                        information, including price charts, trends, and performance indicators.
+                                    </li>
+                                    <li><span>Portfolio Management</span>: Track the performance of your investments,
+                                        view your asset allocation, and monitor your overall portfolio growth.
+                                    </li>
                                 </ul>
                             </div>
                         @endif
