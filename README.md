@@ -1,4 +1,4 @@
-# iBank Project Setup - below
+# iBank Project Setup
 
 Welcome to the iBank project! This document provides step-by-step instructions to help you set up and run the project on your local machine.
 
