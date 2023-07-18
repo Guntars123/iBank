@@ -2,7 +2,7 @@
 
 Welcome to the iBank project! This document provides step-by-step instructions to help you set up and run the project on your local machine.
 
-## Key Features:
+## Key Features
 
 - **Two-Factor Authentication (2FA):** iBank prioritizes user security by implementing a Two-Factor Authentication mechanism, providing an extra layer of protection for user logins and transactions.
 
