@@ -1,6 +1,33 @@
-# iBank Project Setup
+# iBank Project Setup - bellow
 
 Welcome to the iBank project! This document provides step-by-step instructions to help you set up and run the project on your local machine.
+
+## Key Features:
+
+- **Two-Factor Authentication (2FA):** iBank prioritizes user security by implementing a Two-Factor Authentication mechanism, providing an extra layer of protection for user logins and transactions.
+
+- **Bank Account Management:** Users can easily manage their traditional bank accounts, view balances, and perform various financial operations effortlessly.
+
+- **Investment Account Support:** iBank goes beyond traditional banking by allowing users to manage their investment accounts within the same application. This seamless integration simplifies users' financial management.
+
+- **Cryptocurrency Transactions:** As a forward-thinking banking solution, iBank facilitates buying and selling of cryptocurrencies. Users can explore the world of digital assets through the application's user-friendly interface.
+
+- **MySQL Database Integration:** The application stores and manages data using the reliable and efficient MySQL database, ensuring data integrity and performance.
+
+- **API Integration:** iBank integrates two APIs to enhance functionality. The first API is dedicated to retrieving real-time currency exchange rates, while the second API provides up-to-date information on various cryptocurrencies, enabling users to make informed decisions.
+
+## Page screenshots
+
+![Homepage Preview](public/screenshots/welcome.png)
+![Homepage Preview](public/screenshots/login.png)
+![Homepage Preview](public/screenshots/home.png)
+![Homepage Preview](public/screenshots/bank_accounts.png)
+![Homepage Preview](public/screenshots/bankacc-show.png)
+![Homepage Preview](public/screenshots/transaction_form.png)
+![Homepage Preview](public/screenshots/invest-acc-show.png)
+![Homepage Preview](public/screenshots/buy-ctypto.png)
+![Homepage Preview](public/screenshots/sell-crypto.png)
+![Homepage Preview](public/screenshots/security.png)
 
 ## Prerequisites
 Before you begin, ensure that you have the following prerequisites installed on your system:
@@ -46,25 +73,6 @@ Before you begin, ensure that you have the following prerequisites installed on 
    
 2. Open the application in your browser!
 
-   
-## Additional Information
-The iBank project is built using Laravel, a powerful PHP framework. It leverages Laravel Breeze for user registration and authentication.
-The project uses MySQL as the database to store user and financial data.
-To fetch cryptocurrency data, the project integrates with the CoinMarketCap API. Make sure to provide your valid CoinMarketCap API key in the .env file.
-Enjoy using the iBank project and managing your finances seamlessly!
-
-## Page screenshots
-
-![Homepage Preview](public/screenshots/welcome.png)
-![Homepage Preview](public/screenshots/login.png)
-![Homepage Preview](public/screenshots/home.png)
-![Homepage Preview](public/screenshots/bank_accounts.png)
-![Homepage Preview](public/screenshots/bankacc-show.png)
-![Homepage Preview](public/screenshots/transaction_form.png)
-![Homepage Preview](public/screenshots/invest-acc-show.png)
-![Homepage Preview](public/screenshots/buy-ctypto.png)
-![Homepage Preview](public/screenshots/sell-crypto.png)
-![Homepage Preview](public/screenshots/security.png)
 
 
 
